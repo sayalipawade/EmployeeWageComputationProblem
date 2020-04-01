@@ -1,28 +1,29 @@
 package com.employee;
-
 import java.util.Random;
-
 public class Employee
 {
+    //Constants
+    public static final int IS_EMP_PRESENT=1;
+    public static final int EMP_RATE_PER_HOUR=20;
     //Checking employee is present or absent
-    public static void attendenceChecking(int IS_EMP_PRESENT)
+    public static void calculateDailyWage()
     {
+        //variables
+        int empHours=0;
+        int empDailyWage=0;
+
         Random randNo=new Random();
         int empCheck=randNo.nextInt()%2;
-        if(empCheck==1)
+        if(empCheck==IS_EMP_PRESENT)
         {
-            System.out.println("Employee is present");
+            empHours=8;
         }
-        else
-        {
-            System.out.println("Employee is absent");
-        }
+        empDailyWage=empHours*EMP_RATE_PER_HOUR;
+        System.out.println("Employee Daily wage="+empDailyWage);
     }
     public static void main(String[] args)
     {
         System.out.println("Welcome to employee wage computation");
-        //Constants
-        int IS_EMP_PRESENT=1;
-        attendenceChecking(IS_EMP_PRESENT);
+        calculateDailyWage();
     }
 }
