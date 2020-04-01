@@ -15,18 +15,20 @@ public class Employee
         int empDailyWage=0;
         int empMonthlyWage=0;
 
-        for(int i=1;i<=WORKING_DAYS_IN_MONTH;i++) {
+        for(int i=1;i<=WORKING_DAYS_IN_MONTH;i++)
+        {
             Random randNo = new Random();
             int empCheck = randNo.nextInt() % 3;
-            switch (empCheck) {
+            switch (empCheck)
+            {
                 case IS_EMP_FULL_TIME:
-                    empHours = 8;
-                    break;
+                            empHours = 8;
+                            break;
                 case IS_EMP_PART_TIME:
-                    empHours = 4;
-                    break;
+                            empHours = 4;
+                            break;
                 default:
-                    empHours = 0;
+                            empHours = 0;
             }
             empDailyWage = empHours * EMP_RATE_PER_HOUR;
             empMonthlyWage=empMonthlyWage+empDailyWage;
