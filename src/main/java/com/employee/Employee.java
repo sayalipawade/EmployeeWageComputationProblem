@@ -5,7 +5,7 @@ public class Employee
     //Constants
     public static final int IS_EMP_PRESENT=1;
     public static final int EMP_RATE_PER_HOUR=20;
-    //Checking employee is present or absent
+    //Calculating daily wage of employee
     public static void calculateDailyWage()
     {
         //variables
