@@ -53,9 +53,10 @@ public class Employee
             totalEmpHours = totalEmpHours + empHours;
             totalWorkingDays++;
             empDailyWage[totalWorkingDays]=calculateDailyWage(empHours);
+            System.out.println(totalWorkingDays+"="+empDailyWage[totalWorkingDays]);
             totalSalary=totalSalary+empDailyWage[totalWorkingDays];
         }
-        System.out.println("Total wage of Employee="+totalSalary);
+        System.out.println("Total salary of employee="+totalSalary);
     }
     public static void main(String[] args)
     {
