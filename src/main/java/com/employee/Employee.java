@@ -15,13 +15,16 @@ public class Employee
 
         Random randNo=new Random();
         int empCheck=randNo.nextInt()%3;
-        if(empCheck==IS_EMP_FULL_TIME)
+        switch (empCheck)
         {
-            empHours=8;
-        }
-        else if(empCheck==IS_EMP_PART_TIME)
-        {
-            empHours=4;
+            case IS_EMP_FULL_TIME:
+                            empHours=8;
+                            break;
+            case IS_EMP_PART_TIME:
+                            empHours=4;
+                            break;
+            default:
+                empHours=0;
         }
         empDailyWage=empHours*EMP_RATE_PER_HOUR;
         System.out.println("Employee Daily wage="+empDailyWage);
